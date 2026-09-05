@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOFRAME</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #111;
+            color: #f4f4f4;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            width: 100%;
+            padding: 25px 5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+
+        .logo span {
+            color: #d9ff3f;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            font-size: 14px;
+        }
+
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: #d9ff3f;
+        }
+
+        .hero {
+            min-height: 100vh;
+            padding: 180px 5vw 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 11vw, 150px);
+            line-height: .85;
+            letter-spacing: -7px;
+            max-width: 1000px;
+        }
+
+        .hero h1 span {
+            color: #d9ff3f;
+        }
+
+        .hero p {
+            margin-top: 35px;
+            max-width: 600px;
+            color: #aaa;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 35px;
+            width: fit-content;
+            padding: 16px 30px;
+            background: #d9ff3f;
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .button:hover {
+            transform: translateY(-4px);
+        }
+
+        section {
+            padding: 100px 5vw;
+        }
+
+        section h2 {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #333;
+            padding: 30px;
+            min-height: 200px;
+        }
+
+        .card h3 {
+            color: #d9ff3f;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 50px 5vw;
+            border-top: 1px solid #333;
+            color: #777;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 20px;
+            }
+
+            nav {
+                gap: 12px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .hero h1 {
+                letter-spacing: -4px;
+            }
+
+            section {
+                padding: 70px 20px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NO<span>FRAME</span></div>
+
+    <nav>
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h1>
+            ВЫХОДИ<br>
+            ЗА <span>РАМКИ.</span>
+        </h1>
+
+        <p>
+            Современный цифровой проект для тех,
+            кто не хочет быть как все.
+        </p>
+
+        <a href="#about" class="button">УЗНАТЬ БОЛЬШЕ →</a>
+    </section>
+
+    <section id="about">
+        <h2>О NOFRAME</h2>
+
+        <p style="max-width:700px; color:#999; line-height:1.8;">
+            NOFRAME — это пространство без ограничений.
+            Мы создаём современные цифровые решения,
+            дизайн и технологии, которые выделяются среди остальных.
+        </p>
+    </section>
+
+    <section id="services">
+        <h2>ВОЗМОЖНОСТИ</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>01 — DESIGN</h3>
+                <p>
+                    Минималистичный и современный дизайн,
+                    который запоминается.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>02 — DIGITAL</h3>
+                <p>
+                    Создание сайтов и цифровых продуктов
+                    под любые задачи.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>03 — FUTURE</h3>
+                <p>
+                    Используем современные технологии,
+                    чтобы создавать проекты будущего.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>КОНТАКТЫ</h2>
+
+        <p style="color:#999; line-height:1.8;">
+            Готовы выйти за рамки?
+        </p>
+
+        <a href="mailto:hello@noframe.ru" class="button">
+            НАПИСАТЬ НАМ
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 NOFRAME. Все права защищены.
+</footer>
+
+</body>
+</html>
